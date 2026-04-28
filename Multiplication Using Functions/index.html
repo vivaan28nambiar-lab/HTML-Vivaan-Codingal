@@ -1,7 +1,19 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
     <head>
         <title>Multiplication</title>
     </head>
-    
+    <body>
+        <button onclick="myfunction(9)">Multiply</button>
+
+        <script>
+            function myfunction(x, y) {
+                if (y === undefined) {
+                    y = 13;
+                }
+                document.write(x * y);
+            }
+
+        </script>
+    </body>
 </html>
