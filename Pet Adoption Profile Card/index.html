@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <h1>Pet Adoption Profile</h1>
+        <p>Click the button to see a pet available for adoption!</p>
+        <button onclick="showProfile()" >View Pet</button>
+        <div class="card" id="card">
+            <h2>Biscuit</h2>
+            <div id="output"></div>
+        </div>
+        <script>
+            function display(val) {
+                if (val === null)
+                return "<span class='badge-empty'>Not Available</span>";
+                if (val === undefined)
+                return "<span class='badge-empty'>Not Provided</span>";
+                if (val === true)
+                return "<span class='badge-yes'>✔ Yes</span>";
+                if (val === false)
+                    return "<span class='badge-no'>❌ No</span>";
+                return val;
+            }
+            function showProfile() {
+
+                    const petName = "Biscuit";
+                    const age = 3;
+                    let breed = "Golden Retriever";
+                    let mood = "Playful & Friendly";
+
+                    let owner = null;        // no owner yet
+                    let vaccination = null;        // no record yet
+                    let rescueStory;               // never assigned → undefined
+
+                    {
+                        var shelterName = "Happy Paws Shelter";   // var leaks outside block
+                        let shelterCode = "HP-2024";              // let stays inside block
+                    }
+
+                    let adoptionAge = 3;
+                    let ageMatch = (age == adoptionAge);     // true
+
+                    let microchipId = "MC-2024";
+                    let scannedChipId = "MC-2024";
+                    let chipMatch = (microchipId == scannedChipId);  // true
+
+                }
+            
+            
+            
+        </script>
+    </body>
+</html>
